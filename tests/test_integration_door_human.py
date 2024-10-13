@@ -8,7 +8,7 @@ def test_integration_door_opens_with_adult():
     door = Door()
     
     # Human attempts to open the door
-    result = door.attempt_open(adult)
+    result = door.open(adult)
     
     # Assert that the door opens
     assert door.is_open == True
@@ -20,7 +20,7 @@ def test_integration_door_does_not_open_with_toddler():
     door = Door()
     
     # Human attempts to open the door
-    result = door.attempt_open(toddler)
+    result = door.open(toddler)
     
     # Assert that the door does not open
     assert door.is_open == False
@@ -32,7 +32,7 @@ def test_integration_door_opens_with_exactly_3yo():
     door = Door()
     
     # Human attempts to open the door
-    result = door.attempt_open(young_human)
+    result = door.open(young_human)
     
     # Assert that the door opens since the human is 3yo or older
     assert door.is_open == True
